@@ -28,11 +28,11 @@ const App = () => {
   }, []);
 
   return (
-    <div className="jobs-center">
+    <div>
       {isLoading ? (
         <div className="loading"></div>
       ) : (
-        <section style={{ display: "flex", flexDirection: "row" }}>
+        <section className="jobs-center">
           <BtnContainer
             jobs={jobs}
             currentItem={currentItem}

@@ -26,16 +26,8 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      {isLoading ? (
-        <section className="jobs-center">
-          <div className="loading"></div>
-        </section>
-      ) : (
-        <section className="jobs-center">
-          <JobInfo jobs={jobs} />
-        </section>
-      )}
+    <div className="jobs-center">
+      {isLoading ? <div className="loading"></div> : <JobInfo jobs={jobs} />}
     </div>
   );
 };

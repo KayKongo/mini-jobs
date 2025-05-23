@@ -1,7 +1,21 @@
-const BtnContainer = ({ jobs }) => {
+const BtnContainer = ({ jobs, currentItem, setCurrentItem }) => {
+  const selectJob = (value) => {
+    setCurrentItem(value);
+  };
+
   return (
     <div className="btn-container">
-      <button className=""></button>
+      {jobs.map((job) => {
+        return (
+          <button
+            key={job.id}
+            className="job-btn"
+            onClick={() => selectJob(job.order)}
+          >
+            {job.title}
+          </button>
+        );
+      })}
     </div>
   );
 };

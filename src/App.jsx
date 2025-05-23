@@ -33,8 +33,12 @@ const App = () => {
         <div className="loading"></div>
       ) : (
         <section style={{ display: "flex", flexDirection: "row" }}>
-          <BtnContainer jobs={jobs} />
-          <JobInfo jobs={jobs} />
+          <BtnContainer
+            jobs={jobs}
+            currentItem={currentItem}
+            setCurrentItem={setCurrentItem}
+          />
+          <JobInfo jobs={jobs} currentItem={currentItem} />
         </section>
       )}
     </div>
